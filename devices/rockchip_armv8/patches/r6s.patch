@@ -26,7 +26,7 @@
 
 --- a/target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 +++ b/target/linux/rockchip/armv8/base-files/etc/board.d/02_network
-@@ -19,9 +19,14 @@ rockchip_setup_interfaces()
+@@ -19,9 +19,13 @@ rockchip_setup_interfaces()
  	rocktech,mpc1903|\
  	sharevdi,guangmiao-g4c|\
  	xunlong,orangepi-r1-plus|\
@@ -38,7 +38,6 @@
 +	friendlyarm,nanopi-r6s)
 +		ucidef_set_interfaces_lan_wan "eth1 eth0" "eth2"
 +		;;
-+	*)
  	hinlink,opc-h68k|\
  	hinlink,opc-h69k)
  		ucidef_set_interfaces_lan_wan 'eth1 eth2 eth3' 'eth0'
