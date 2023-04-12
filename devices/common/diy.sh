@@ -43,6 +43,8 @@ svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/generic/hack-5.10
 rm -rf target/linux/generic/hack-5.10/{220-gc_sections*,781-dsa-register*,780-drivers-net*,996-fs-ntfs3*,100-update-mtk_wed_h.patch}
 ) &
 
+curl -sfL https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/generic/pending-5.10/613-netfilter_optional_tcp_window_check.patch -o target/linux/generic/pending-5.10/613-netfilter_optional_tcp_window_check.patch
+
 sed -i "/BuildPackage,miniupnpd-iptables/d" feeds/packages/net/miniupnpd/Makefile
 sed -i 's/Os/O2/g' include/target.mk
 sed -i "/mediaurlbase/d" package/feeds/*/luci-theme*/root/etc/uci-defaults/*
